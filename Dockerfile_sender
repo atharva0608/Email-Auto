@@ -1,1 +1,10 @@
-# Dockerfile for Email sender placeholder
+FROM python:3.11-slim
+
+WORKDIR /sender
+COPY ./sender /sender
+COPY ./uploads /sender/uploads
+COPY ./email_automation.db /sender/
+COPY ./requirements.txt /sender/
+RUN pip install -r requirements.txt
+
+CMD ["python", "send_bulk_emails.py"]

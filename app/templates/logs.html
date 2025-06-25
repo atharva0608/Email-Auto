@@ -1,1 +1,11 @@
-<!-- Logs HTML placeholder -->
+<!doctype html>
+<html><body>
+<h1>Logs</h1>
+<table border="1">
+<tr><th>Email</th><th>Status</th><th>Timestamp</th></tr>
+{% for log in logs %}
+<tr><td>{{ log['email'] }}</td><td>{{ log['status'] }}</td><td>{{ log['timestamp'] }}</td></tr>
+{% endfor %}
+</table>
+<a href="/">Back</a>
+</body></html>
