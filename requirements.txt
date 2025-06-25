@@ -1,5 +1,4 @@
 flask
 pandas
 python-dotenv
-sqlite3
 openpyxl
