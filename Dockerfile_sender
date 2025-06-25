@@ -5,6 +5,7 @@ COPY ./sender /sender
 COPY ./uploads /sender/uploads
 COPY ./email_automation.db /sender/
 COPY ./requirements.txt /sender/
-RUN pip install -r requirements.txt
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python", "send_bulk_emails.py"]

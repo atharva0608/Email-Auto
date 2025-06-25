@@ -7,14 +7,10 @@ services:
       dockerfile: Dockerfile_app
     ports:
       - "5000:5000"
-    volumes:
-      - .:/app
     restart: always
 
   email-sender:
     build:
       context: .
       dockerfile: Dockerfile_sender
-    volumes:
-      - .:/sender
     restart: always
